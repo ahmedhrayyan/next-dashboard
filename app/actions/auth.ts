@@ -1,8 +1,9 @@
 "use server";
 
 import { redirect } from "next/navigation";
-import { FormState, LoginFormSchema } from "@/app/lib/definitions";
-import { createSession, deleteSession } from "@/app/lib/session";
+
+import { FormState, LoginFormSchema } from "@/lib/definitions";
+import { createSession, deleteSession } from "@/lib/session";
 
 export async function login(state: FormState, formData: FormData) {
   await new Promise((resolve) => setTimeout(resolve, 500));

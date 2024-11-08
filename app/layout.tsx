@@ -4,6 +4,8 @@ import { Inter } from "next/font/google";
 
 import "./globals.css";
 
+import { NuqsAdapter } from "nuqs/adapters/next/app";
+
 import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({
@@ -27,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
-        {children}
+        <NuqsAdapter>{children}</NuqsAdapter>
         <Toaster />
       </body>
     </html>

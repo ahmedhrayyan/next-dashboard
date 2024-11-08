@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { verifySession } from "@/app/lib/dal";
+
+import { verifySession } from "@/lib/dal";
 
 // 1. Specify protected and public routes
 const publicRoutes = ["/login"];
