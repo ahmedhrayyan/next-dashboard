@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Link from "next/link";
 
 import {
@@ -5,10 +6,16 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import Header from "@/components/header";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Products",
+};
+
+export default function Products() {
   return (
     <div>
       <Header>
@@ -18,6 +25,10 @@ export default function Home() {
               <BreadcrumbLink href="#" asChild>
                 <Link href="/">Dashboard</Link>
               </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator className="hidden md:block" />
+            <BreadcrumbItem>
+              <BreadcrumbPage>Products</BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
