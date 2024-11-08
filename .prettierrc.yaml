@@ -1,0 +1,23 @@
+trailingComma: "all"
+semi: true
+singleQuote: false
+importOrder:
+  [
+    "^(react/(.*)$)|^(react$)",
+    "^(next/(.*)$)|^(next$)",
+    "^@lingui/(.*)$",
+    "<THIRD_PARTY_MODULES>",
+    "",
+    "~/(.*)$",
+    "",
+    "^types$",
+    "^@/lib/(.*)$",
+    "^@/hooks/(.*)$",
+    "^@/components/ui/(.*)$",
+    "^@/components/(.*)$",
+    "^@/fonts",
+    "",
+    "^[./]",
+  ]
+plugins: ["@ianvs/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"]
+tailwindConfig: "./tailwind.config.ts"
