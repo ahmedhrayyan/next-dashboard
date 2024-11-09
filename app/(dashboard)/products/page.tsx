@@ -23,7 +23,11 @@ export const metadata: Metadata = {
   title: "Products",
 };
 
-export default async function Products({ searchParams }: { searchParams: Record<string, string> }) {
+export default async function Products({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string>>;
+}) {
   const categories = await ProductService.fetchCategories();
   const { search, category } = await searchParams;
   return (
