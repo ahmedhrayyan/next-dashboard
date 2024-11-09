@@ -11,6 +11,7 @@ import { Toaster } from "@/components/ui/sonner";
 const inter = Inter({
   variable: "--font-inter",
   weight: "variable",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
